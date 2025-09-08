@@ -220,6 +220,20 @@
         "indentSize": 2,
         "baseName": "seed4jSampleExtension"
       }
+    },
+    {
+      "module": "java-base",
+      "date": "2025-09-08T06:17:08.811396075Z",
+      "properties": {
+        "endOfLine": "lf",
+        "springConfigurationFormat": "yaml",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
+        "serverPort": 8080,
+        "indentSize": 2,
+        "baseName": "seed4jSampleExtension",
+        "nodePackageManager": "npm"
+      }
     }
   ]
 }

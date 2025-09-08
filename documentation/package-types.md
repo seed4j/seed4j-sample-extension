@@ -8,17 +8,13 @@ This application comes with two package level annotations:
 To mark a package, you have to add a `package-info.java` file at the package root with:
 
 ```java
-@SharedKernel
-package tech.jhipster.lite.extension;
-
-import com.seed4j.extension.SharedKernel;
+@com.seed4j.extension.SharedKernel
+package com.seed4j.extension;
 ```
 
 or:
 
 ```java
-@BusinessContext
-package tech.jhipster.lite.extension;
-
-import com.seed4j.extension.BusinessContext;
+@com.seed4j.extension.BusinessContext
+package com.seed4j.extension;
 ```

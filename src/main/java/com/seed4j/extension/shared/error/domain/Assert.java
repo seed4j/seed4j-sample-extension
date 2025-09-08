@@ -28,7 +28,7 @@ public final class Assert {
    * Ensure that the input is not null
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param input
    *          input to check
    * @throws MissingMandatoryValueException
@@ -44,7 +44,7 @@ public final class Assert {
    * Ensure that the value is not blank (null, empty or only whitespace)
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param input
    *          input to check
    * @throws MissingMandatoryValueException
@@ -58,7 +58,7 @@ public final class Assert {
    * Ensure that the given collection is not empty
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param collection
    *          collection to check
    * @throws MissingMandatoryValueException
@@ -72,7 +72,7 @@ public final class Assert {
    * Ensure that the given map is not empty
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param map
    *          map to check
    * @throws MissingMandatoryValueException
@@ -102,7 +102,7 @@ public final class Assert {
    * </pre>
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param input
    *          string to check
    * @return A {@link StringAsserter} for this field and value
@@ -127,7 +127,7 @@ public final class Assert {
    * </pre>
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param input
    *          value to check
    * @return An {@link IntegerAsserter} for this field and value
@@ -152,7 +152,7 @@ public final class Assert {
    * </pre>
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param input
    *          value to check
    * @return An {@link LongAsserter} for this field and value
@@ -177,7 +177,7 @@ public final class Assert {
    * </pre>
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param input
    *          value to check
    * @return An {@link DoubleAsserter} for this field and value
@@ -202,7 +202,7 @@ public final class Assert {
    * </pre>
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param input
    *          value to check
    * @return An {@link DoubleAsserter} for this field and value
@@ -227,7 +227,7 @@ public final class Assert {
    * </pre>
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param input
    *          value to check
    * @return An {@link BigDecimalAsserter} for this field and value
@@ -252,7 +252,7 @@ public final class Assert {
    * </pre>
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param input
    *          collection to check
    * @return A {@link CollectionAsserter} for this field and value
@@ -277,7 +277,7 @@ public final class Assert {
    * </pre>
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param input
    *          array to check
    * @return A {@link ArrayAsserter} for this field and value
@@ -302,7 +302,7 @@ public final class Assert {
    * </pre>
    *
    * @param field
-   *          name of the field to check (will be displayed in exception message)
+   *          name of the field to check (will be displayed in an exception message)
    * @param input
    *          value to check
    * @return An {@link InstantAsserter} for this field and value
@@ -442,7 +442,7 @@ public final class Assert {
     public IntegerAsserter min(int minValue) {
       notNull(field, value);
 
-      if (value.intValue() < minValue) {
+      if (value < minValue) {
         throw NumberValueTooLowException.builder().field(field).minValue(String.valueOf(minValue)).value(String.valueOf(value)).build();
       }
 
@@ -463,7 +463,7 @@ public final class Assert {
     public IntegerAsserter max(int maxValue) {
       notNull(field, value);
 
-      if (value.intValue() > maxValue) {
+      if (value > maxValue) {
         throw NumberValueTooHighException.builder().field(field).maxValue(String.valueOf(maxValue)).value(String.valueOf(value)).build();
       }
 
@@ -511,7 +511,7 @@ public final class Assert {
     public LongAsserter min(long minValue) {
       notNull(field, value);
 
-      if (value.longValue() < minValue) {
+      if (value < minValue) {
         throw NumberValueTooLowException.builder().field(field).minValue(String.valueOf(minValue)).value(String.valueOf(value)).build();
       }
 
@@ -532,7 +532,7 @@ public final class Assert {
     public LongAsserter max(long maxValue) {
       notNull(field, value);
 
-      if (value.longValue() > maxValue) {
+      if (value > maxValue) {
         throw NumberValueTooHighException.builder().field(field).maxValue(String.valueOf(maxValue)).value(String.valueOf(value)).build();
       }
 
@@ -593,7 +593,7 @@ public final class Assert {
     public FloatAsserter min(float minValue) {
       notNull(field, value);
 
-      if (value.floatValue() < minValue) {
+      if (value < minValue) {
         throw tooLow(minValue);
       }
 
@@ -614,7 +614,7 @@ public final class Assert {
     public FloatAsserter over(float floor) {
       notNull(field, value);
 
-      if (value.floatValue() <= floor) {
+      if (value <= floor) {
         throw tooLow(floor);
       }
 
@@ -639,7 +639,7 @@ public final class Assert {
     public FloatAsserter max(float maxValue) {
       notNull(field, value);
 
-      if (value.floatValue() > maxValue) {
+      if (value > maxValue) {
         throw tooHigh(maxValue);
       }
 
@@ -660,7 +660,7 @@ public final class Assert {
     public FloatAsserter under(float ceil) {
       notNull(field, value);
 
-      if (value.floatValue() >= ceil) {
+      if (value >= ceil) {
         throw tooHigh(ceil);
       }
 
@@ -725,7 +725,7 @@ public final class Assert {
     public DoubleAsserter min(double minValue) {
       notNull(field, value);
 
-      if (value.doubleValue() < minValue) {
+      if (value < minValue) {
         throw tooLow(minValue);
       }
 
@@ -746,7 +746,7 @@ public final class Assert {
     public DoubleAsserter over(double floor) {
       notNull(field, value);
 
-      if (value.doubleValue() <= floor) {
+      if (value <= floor) {
         throw tooLow(floor);
       }
 
@@ -771,7 +771,7 @@ public final class Assert {
     public DoubleAsserter max(double maxValue) {
       notNull(field, value);
 
-      if (value.doubleValue() > maxValue) {
+      if (value > maxValue) {
         throw tooHigh(maxValue);
       }
 
@@ -792,7 +792,7 @@ public final class Assert {
     public DoubleAsserter under(double ceil) {
       notNull(field, value);
 
-      if (value.doubleValue() >= ceil) {
+      if (value >= ceil) {
         throw tooHigh(ceil);
       }
 
@@ -1211,7 +1211,7 @@ public final class Assert {
      * @throws MissingMandatoryValueException
      *           if the input value is null
      * @throws NotAfterTimeException
-     *           if the input instant is in past
+     *           if the input instant is in the past
      */
     public InstantAsserter inFuture() {
       return afterOrAt(Instant.now());
@@ -1221,7 +1221,7 @@ public final class Assert {
      * Ensure that the input instant is after the given instant
      *
      * @param other
-     *          exclusive after instant
+     *          exclusive after an instant
      * @return The current asserter
      * @throws MissingMandatoryValueException
      *           if input or other are null
@@ -1243,7 +1243,7 @@ public final class Assert {
      * Ensure that the input instant is after the given instant
      *
      * @param other
-     *          inclusive after instant
+     *          inclusive after an instant
      * @return The current asserter
      * @throws MissingMandatoryValueException
      *           if input or other are null
@@ -1278,7 +1278,7 @@ public final class Assert {
      * Ensure that the input instant is before the given instant
      *
      * @param other
-     *          exclusive before instant
+     *          exclusive before an instant
      * @return The current asserter
      * @throws MissingMandatoryValueException
      *           if input or other are null
@@ -1300,7 +1300,7 @@ public final class Assert {
      * Ensure that the input instant is before the given instant
      *
      * @param other
-     *          inclusive before instant
+     *          inclusive before an instant
      * @return The current asserter
      * @throws MissingMandatoryValueException
      *           if input or other are null

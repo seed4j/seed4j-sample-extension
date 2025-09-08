@@ -2,6 +2,7 @@ package com.seed4j.extension;
 
 import java.lang.reflect.Method;
 import java.util.List;
+import java.util.Locale;
 import org.junit.jupiter.api.DisplayNameGenerator;
 
 public class ReplaceCamelCase extends DisplayNameGenerator.Standard {
@@ -13,8 +14,8 @@ public class ReplaceCamelCase extends DisplayNameGenerator.Standard {
 
   private String replaceCapitals(String name) {
     name = name.replaceAll("([A-Z])", " $1");
-    name = name.replaceAll("([0-9]+)", " $1");
-    name = name.toLowerCase();
+    name = name.replaceAll("(\\d+)", " $1");
+    name = name.toLowerCase(Locale.ROOT);
     return name;
   }
 }

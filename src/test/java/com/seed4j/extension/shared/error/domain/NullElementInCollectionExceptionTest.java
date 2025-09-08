@@ -10,7 +10,7 @@ class NullElementInCollectionExceptionTest {
 
   @Test
   void shouldGetExceptionInformation() {
-    NullElementInCollectionException exception = new NullElementInCollectionException("myField");
+    var exception = new NullElementInCollectionException("myField");
 
     assertThat(exception.type()).isEqualTo(AssertionErrorType.NULL_ELEMENT_IN_COLLECTION);
     assertThat(exception.field()).isEqualTo("myField");
