@@ -58,18 +58,23 @@ jobs:
           chmod +x tests-ci/sonar.sh
           ./tests-ci/sonar.sh
       - name: 'Analysis: SonarCloud'
-        if: github.repository == 'jhipster/jhipster-lite-extension' && github.ref == 'refs/heads/main'
+        if: github.repository == 'seed4j/seed4j-sample-extension' && github.ref == 'refs/heads/main'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./mvnw initialize sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=jhipster_jhipster-lite-extension -Dsonar.organization=jhipster -Dsonar.login= -Dsonar.password=
+        run: |
+          ./mvnw initialize sonar:sonar \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.projectKey=seed4j_seed4j-sample-extension \
+            -Dsonar.organization=seed4j \
+            -Dsonar.token=$SONAR_TOKEN
       - name: 'Test: generate sample app'
         run: |
           ./tests-ci/start.sh
           ./tests-ci/generate.sh fullapp maven yaml
           ./tests-ci/stop.sh
       - name: 'Test: verify generated sample app'
-        working-directory: /tmp/jhlite/fullapp/
+        working-directory: /tmp/seed4j/fullapp/
         run: |
           if [ -f 'mvnw' ]; then
             ./mvnw clean verify
