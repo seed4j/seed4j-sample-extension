@@ -2,8 +2,8 @@
 
 application=$1
 if [[ $application == '' ]]; then
-  echo "using jhliteExtensionSample by default"
-  application='jhliteExtensionSample'
+  echo "using seed4jSampleExtension by default"
+  application='seed4jSampleExtension'
 fi
 
 retry_count=0

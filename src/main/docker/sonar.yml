@@ -1,9 +1,8 @@
 # This configuration is intended for development purpose, it's **your** responsibility to harden it for production
 services:
   sonar:
-    image: sonarqube:10.7.0-community
+    image: sonarqube:25.9.0.112764-community
     container_name: sonar
-    platform: linux/x86_64
     # Authentication is turned off for out of the box experience while trying out SonarQube
     # For real use cases delete sonar.forceAuthentication variable or set sonar.forceAuthentication=true
     environment:
@@ -12,3 +11,12 @@ services:
     # remove the "127.0.0.1:" prefix
     ports:
       - '127.0.0.1:9001:9000'
+  sonar-token:
+    build:
+      context: .
+      dockerfile: sonar/Dockerfile
+    container_name: sonar-token
+    environment:
+      - SEED4J_SONAR_URL=http://sonar:9000
+    depends_on:
+      - sonar

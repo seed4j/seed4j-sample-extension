@@ -32,27 +32,15 @@ jobs:
       - name: 'Prettier: check'
         run: npm run prettier:check
       - name: 'Start local Sonar'
-        run: docker compose -f src/main/docker/sonar.yml up -d
-      - name: 'Wait for SonarQube to be ready'
         run: |
-          echo 'Waiting for SonarQube to start...'
-          for attempt in {1..30}; do
-            if [ "$(curl -s -o /dev/null -w '%{http_code}' http://localhost:9001/api/system/status)" -eq 200 ] && \
-               curl -s http://localhost:9001/api/system/status | jq -e '.status == "UP"' > /dev/null; then
-              echo "SonarQube is UP"
-              break
-            fi
-            echo "Waiting for SonarQube... ($attempt/30)"
-            sleep 10
-          done
-          if [ $attempt -eq 30 ]; then
-            echo 'SonarQube did not become ready in time. Exiting.'
-            exit 1
-          fi
+          docker compose -f src/main/docker/sonar.yml up -d \
+            && docker logs -f sonar-token && SONAR_TOKEN=$(docker logs sonar-token)
+          docker ps -a
       - name: 'Test: run tests'
         run: |
+          SONAR_TOKEN=$(docker logs sonar-token)
           chmod +x mvnw
-          ./mvnw clean verify -Dsonar.qualitygate.wait=true sonar:sonar
+          ./mvnw clean verify -Dsonar.qualitygate.wait=true sonar:sonar -Dsonar.token=$SONAR_TOKEN
       - name: 'Analysis: local Sonar'
         run: |
           chmod +x tests-ci/sonar.sh
