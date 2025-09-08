@@ -13,7 +13,7 @@ You can start by the element you prefer but to create a `JHipsterModuleResource`
 
 In fact, you don't just need to create one `JHipsterModule`, you'll need a factory able to create them since each instance depends on the properties chosen by the users.
 
-So, as this is the business of JHLite you probably want to create a `tech.jhipster.lite.extension.my_module.domain` package. And you can start with a simple test:
+So, as this is the business of JHLite you probably want to create a `com.seed4j.extension.my_module.domain` package. And you can start with a simple test:
 
 ```java
 import static tech.jhipster.lite.module.infrastructure.secondary.JHipsterModulesAssertions.*;
@@ -59,13 +59,13 @@ public class MyModuleFactory {
   private static final JHipsterSource SOURCE = from("my-module");
 
   public JHipsterModule buildModule(JHipsterModuleProperties properties) {
-    //@formatter:off
+    // @formatter:off
     return moduleBuilder(properties)
       .files()
         .add(SOURCE.template("Dummy.java"), toSrcMainJava().append(properties.packagePath()).append("my_package").append("Dummy.java"))
         .and()
       .build();
-    //@formatter:on
+    // @formatter:on
   }
 }
 ```
@@ -75,7 +75,7 @@ This implementation will take a file from `src/main/resources/generator/my-modul
 The file is a template named `Dummy.java.mustache` and can contain some mustache placeholders:
 
 ```java
-package tech.jhipster.lite.extension.my_package;
+package com.seed4j.extension.my_package;
 
 public class Dummy {
   // ...
@@ -115,14 +115,14 @@ You can now run `CucumberTest` and ensure that it is failing as expected:
 }
 ```
 
-To be used by JHLite, the `JHipsterModuleResource` needs to be a Spring bean so, let's create a configuration in `tech.jhipster.lite.extension.my_module.infrastructure.primary`:
+To be used by JHLite, the `JHipsterModuleResource` needs to be a Spring bean so, let's create a configuration in `com.seed4j.extension.my_module.infrastructure.primary`:
 
 ```java
-import static tech.jhipster.lite.extension.slug.domain.MyAppModuleSlug.*;
+import static com.seed4j.extension.slug.domain.MyAppModuleSlug.*;
 
+import com.seed4j.extension.my_module.application.MyModuleApplicationService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import tech.jhipster.lite.extension.my_module.application.MyModuleApplicationService;
 import tech.jhipster.lite.module.domain.resource.JHipsterModulePropertiesDefinition;
 import tech.jhipster.lite.module.domain.resource.JHipsterModuleResource;
 
@@ -144,7 +144,7 @@ class MyModuleModuleConfiguration {
 
 In fact, you don't really have choices here, the `JHipsterModuleResource.builder()` is fluent and will only let you go to the next possible step. The most confusing one may be the last one `.factory(myModules::buildModule)` which is, in fact, a method called to build the module.
 
-You'll need to create the MyAppModuleSlug.MY_MODULE enum, which was mentioned earlier. Let's create it in the `tech.jhipster.lite.extension.slug.domain` package:
+You'll need to create the MyAppModuleSlug.MY_MODULE enum, which was mentioned earlier. Let's create it in the `com.seed4j.extension.slug.domain` package:
 
 ```java
 import java.util.Map;
@@ -177,7 +177,7 @@ public enum MyAppModuleSlug implements JHipsterModuleSlugFactory {
 }
 ```
 
-For this to work, we'll need to add a simple orchestration class in `tech.jhipster.lite.extension.my_module.application`:
+For this to work, we'll need to add a simple orchestration class in `com.seed4j.extension.my_module.application`:
 
 ```java
 @Service

@@ -15,13 +15,13 @@ Feature: Simple WebService test
 You'll then have to define the glue code:
 
 ```java
-import static tech.jhipster.lite.extension.cucumber.rest.CucumberRestAssertions.*;
+import static com.seed4j.extension.cucumber.rest.CucumberRestAssertions.*;
 
+import com.seed4j.extension.cucumber.CucumberRestTemplate;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import tech.jhipster.lite.extension.cucumber.CucumberRestTemplate;
 
 public class SimpleSteps {
 

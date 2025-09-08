@@ -6,14 +6,28 @@
 >
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>tech.jhipster.lite.extension</groupId>
-  <artifactId>jhlite-extension-sample</artifactId>
+  <groupId>com.seed4j.extension</groupId>
+  <artifactId>seed4j-sample-extension</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>jhliteExtensionSample</name>
-  <description>JHLite Extension Sample</description>
+  <name>seed4jSampleExtension</name>
+  <description>Seed4J Sample Extension</description>
   <packaging>jar</packaging>
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>${junit-jupiter.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-bom</artifactId>
+        <version>${cucumber.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
@@ -50,19 +64,16 @@
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-junit-platform-engine</artifactId>
-      <version>${cucumber.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
-      <version>${cucumber.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-spring</artifactId>
-      <version>${cucumber.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -100,7 +111,8 @@
     <surefire-plugin.version>3.5.3</surefire-plugin.version>
     <failsafe-plugin.version>3.5.3</failsafe-plugin.version>
     <spring-boot.version>3.5.4</spring-boot.version>
-    <cucumber.version>7.23.0</cucumber.version>
+    <junit-jupiter.version>5.13.3</junit-jupiter.version>
+    <cucumber.version>7.28.1</cucumber.version>
     <jhlite.version>1.35.0</jhlite.version>
     <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
     <jacoco.version>0.8.13</jacoco.version>
@@ -177,7 +189,7 @@
             </execution>
           </executions>
           <configuration>
-            <mainClass>tech.jhipster.lite.extension.JhliteExtensionSampleApp</mainClass>
+            <mainClass>com.seed4j.extension.Seed4jSampleExtensionApp</mainClass>
           </configuration>
         </plugin>
         <plugin>

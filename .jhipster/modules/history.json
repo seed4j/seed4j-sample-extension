@@ -4,9 +4,9 @@
       "module": "init",
       "date": "2024-06-04T14:50:37.819463965Z",
       "properties": {
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
-        "baseName": "jhliteExtensionSample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
+        "baseName": "seed4jSampleExtension",
         "serverPort": 8080,
         "endOfLine": "lf",
         "indentSize": 2,
@@ -17,9 +17,9 @@
       "module": "maven-java",
       "date": "2024-06-04T14:50:37.902634737Z",
       "properties": {
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
-        "baseName": "jhliteExtensionSample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
+        "baseName": "seed4jSampleExtension",
         "serverPort": 8080,
         "endOfLine": "lf",
         "indentSize": 2,
@@ -30,9 +30,9 @@
       "module": "java-base",
       "date": "2024-06-04T14:50:38.009320716Z",
       "properties": {
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
-        "baseName": "jhliteExtensionSample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
+        "baseName": "seed4jSampleExtension",
         "serverPort": 8080,
         "endOfLine": "lf",
         "indentSize": 2,
@@ -43,9 +43,9 @@
       "module": "maven-wrapper",
       "date": "2024-06-04T14:50:38.131151735Z",
       "properties": {
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
-        "baseName": "jhliteExtensionSample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
+        "baseName": "seed4jSampleExtension",
         "serverPort": 8080,
         "endOfLine": "lf",
         "indentSize": 2,
@@ -56,9 +56,9 @@
       "module": "spring-boot",
       "date": "2024-06-04T14:50:38.249816266Z",
       "properties": {
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
-        "baseName": "jhliteExtensionSample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
+        "baseName": "seed4jSampleExtension",
         "serverPort": 8080,
         "endOfLine": "lf",
         "indentSize": 2,
@@ -69,9 +69,9 @@
       "module": "custom-jhlite",
       "date": "2024-06-04T14:50:38.415852411Z",
       "properties": {
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
-        "baseName": "jhliteExtensionSample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
+        "baseName": "seed4jSampleExtension",
         "serverPort": 8080,
         "endOfLine": "lf",
         "indentSize": 2,
@@ -84,11 +84,11 @@
       "properties": {
         "endOfLine": "lf",
         "springConfigurationFormat": "yaml",
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
         "serverPort": 8080,
         "indentSize": 2,
-        "baseName": "jhliteExtensionSample"
+        "baseName": "seed4jSampleExtension"
       }
     },
     {
@@ -97,11 +97,11 @@
       "properties": {
         "endOfLine": "lf",
         "springConfigurationFormat": "yaml",
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
         "serverPort": 8080,
         "indentSize": 2,
-        "baseName": "jhliteExtensionSample"
+        "baseName": "seed4jSampleExtension"
       }
     },
     {
@@ -110,11 +110,11 @@
       "properties": {
         "endOfLine": "lf",
         "springConfigurationFormat": "yaml",
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
         "serverPort": 8080,
         "indentSize": 2,
-        "baseName": "jhliteExtensionSample"
+        "baseName": "seed4jSampleExtension"
       }
     },
     {
@@ -123,11 +123,11 @@
       "properties": {
         "endOfLine": "lf",
         "springConfigurationFormat": "yaml",
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
         "serverPort": 8080,
         "indentSize": 2,
-        "baseName": "jhliteExtensionSample"
+        "baseName": "seed4jSampleExtension"
       }
     },
     {
@@ -136,11 +136,11 @@
       "properties": {
         "endOfLine": "lf",
         "springConfigurationFormat": "yaml",
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
         "serverPort": 8080,
         "indentSize": 2,
-        "baseName": "jhliteExtensionSample"
+        "baseName": "seed4jSampleExtension"
       }
     },
     {
@@ -149,11 +149,11 @@
       "properties": {
         "endOfLine": "lf",
         "springConfigurationFormat": "yaml",
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
         "serverPort": 8080,
         "indentSize": 2,
-        "baseName": "jhliteExtensionSample"
+        "baseName": "seed4jSampleExtension"
       }
     },
     {
@@ -162,11 +162,11 @@
       "properties": {
         "endOfLine": "lf",
         "springConfigurationFormat": "yaml",
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
         "serverPort": 8080,
         "indentSize": 2,
-        "baseName": "jhliteExtensionSample"
+        "baseName": "seed4jSampleExtension"
       }
     },
     {
@@ -175,11 +175,11 @@
       "properties": {
         "endOfLine": "lf",
         "springConfigurationFormat": "yaml",
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
         "serverPort": 8080,
         "indentSize": 2,
-        "baseName": "jhliteExtensionSample"
+        "baseName": "seed4jSampleExtension"
       }
     },
     {
@@ -188,11 +188,11 @@
       "properties": {
         "endOfLine": "lf",
         "springConfigurationFormat": "yaml",
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
         "serverPort": 8080,
         "indentSize": 2,
-        "baseName": "jhliteExtensionSample"
+        "baseName": "seed4jSampleExtension"
       }
     },
     {
@@ -201,11 +201,11 @@
       "properties": {
         "endOfLine": "lf",
         "springConfigurationFormat": "yaml",
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
         "serverPort": 8080,
         "indentSize": 2,
-        "baseName": "jhliteExtensionSample"
+        "baseName": "seed4jSampleExtension"
       }
     },
     {
@@ -214,11 +214,39 @@
       "properties": {
         "endOfLine": "lf",
         "springConfigurationFormat": "yaml",
-        "packageName": "tech.jhipster.lite.extension",
-        "projectName": "JHLite Extension Sample",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
         "serverPort": 8080,
         "indentSize": 2,
-        "baseName": "jhliteExtensionSample"
+        "baseName": "seed4jSampleExtension"
+      }
+    },
+    {
+      "module": "java-base",
+      "date": "2025-09-08T06:17:08.811396075Z",
+      "properties": {
+        "endOfLine": "lf",
+        "springConfigurationFormat": "yaml",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
+        "serverPort": 8080,
+        "indentSize": 2,
+        "baseName": "seed4jSampleExtension",
+        "nodePackageManager": "npm"
+      }
+    },
+    {
+      "module": "custom-jhlite",
+      "date": "2025-09-08T06:19:42.764124908Z",
+      "properties": {
+        "endOfLine": "lf",
+        "springConfigurationFormat": "yaml",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
+        "serverPort": 8080,
+        "indentSize": 2,
+        "baseName": "seed4jSampleExtension",
+        "nodePackageManager": "npm"
       }
     }
   ]

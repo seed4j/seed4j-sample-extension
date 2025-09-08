@@ -4,7 +4,7 @@ The `Assert` class contains some utilities to make some basic input checks.
 
 Those assertions are done at runtime, and they will result in an exception if the condition is not met. Considering the slow feedback loop we recommend first relying on types for input validations (so you'll have a compile time checks).
 
-Those assertions are designed for very simple, technical related checks. If you want to make business facing checks, you should create your own exceptions && check mechanism dedicated to business validations.
+Those assertions are designed for basic, technical related checks. If you want to make business facing checks, you should create your own exceptions && check mechanism dedicated to business validations.
 
 ## Usage
 
