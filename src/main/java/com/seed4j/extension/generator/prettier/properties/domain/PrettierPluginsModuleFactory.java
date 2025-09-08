@@ -1,6 +1,6 @@
 package com.seed4j.extension.generator.prettier.properties.domain;
 
-import static com.seed4j.extension.shared.dependencies.domain.JhliteExtensionSampleNpmVersionSource.JHLITE_EXTENSION_SAMPLE;
+import static com.seed4j.extension.shared.dependencies.domain.Seed4jSampleExtensionNodePackagesVersionSource.SEED4J_SAMPLE_EXTENSION;
 import static tech.jhipster.lite.module.domain.JHipsterModule.*;
 
 import tech.jhipster.lite.module.domain.JHipsterModule;
@@ -12,7 +12,7 @@ public class PrettierPluginsModuleFactory {
     //@formatter:off
     return moduleBuilder(properties)
       .packageJson()
-        .addDevDependency(packageName("prettier-plugin-properties"), JHLITE_EXTENSION_SAMPLE)
+        .addDevDependency(packageName("prettier-plugin-properties"), SEED4J_SAMPLE_EXTENSION)
         .and()
       .preCommitActions(stagedFilesFilter("*.properties"), preCommitCommands("prettier --write"))
       .build();

@@ -10,13 +10,13 @@ import tech.jhipster.lite.module.infrastructure.secondary.javadependency.JavaDep
 
 @Repository
 @Order(Ordered.HIGHEST_PRECEDENCE)
-public class JhliteExtensionSampleMavenDependenciesReader implements JavaDependenciesReader {
+public class Seed4jSampleExtensionMavenDependenciesReader implements JavaDependenciesReader {
 
-  private static final String CURRENT_VERSIONS_FILE = "/generator/jhlite-extension-sample-dependencies/pom.xml";
+  private static final String CURRENT_VERSIONS_FILE = "/generator/seed4j-sample-extension-dependencies/pom.xml";
 
   private final FileSystemMavenDependenciesReader reader;
 
-  public JhliteExtensionSampleMavenDependenciesReader(ProjectFiles files) {
+  public Seed4jSampleExtensionMavenDependenciesReader(ProjectFiles files) {
     this.reader = new FileSystemMavenDependenciesReader(files, CURRENT_VERSIONS_FILE);
   }
 

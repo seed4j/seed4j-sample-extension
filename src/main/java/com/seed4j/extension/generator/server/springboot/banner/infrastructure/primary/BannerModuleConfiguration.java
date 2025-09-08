@@ -1,7 +1,7 @@
 package com.seed4j.extension.generator.server.springboot.banner.infrastructure.primary;
 
-import static com.seed4j.extension.shared.slug.domain.JhliteExtensionSampleFeatureSlug.*;
-import static com.seed4j.extension.shared.slug.domain.JhliteExtensionSampleModuleSlug.*;
+import static com.seed4j.extension.shared.slug.domain.Seed4jSampleExtensionFeatureSlug.*;
+import static com.seed4j.extension.shared.slug.domain.Seed4jSampleExtensionModuleSlug.*;
 
 import com.seed4j.extension.generator.server.springboot.banner.application.BannerApplicationService;
 import org.springframework.context.annotation.Bean;

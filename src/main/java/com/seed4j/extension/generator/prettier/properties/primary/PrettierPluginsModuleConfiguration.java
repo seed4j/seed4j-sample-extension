@@ -1,6 +1,6 @@
 package com.seed4j.extension.generator.prettier.properties.primary;
 
-import static com.seed4j.extension.shared.slug.domain.JhliteExtensionSampleModuleSlug.PRETTIER_PLUGIN_PROPERTIES;
+import static com.seed4j.extension.shared.slug.domain.Seed4jSampleExtensionModuleSlug.*;
 import static tech.jhipster.lite.shared.slug.domain.JHLiteModuleSlug.PRETTIER;
 
 import com.seed4j.extension.generator.prettier.properties.application.PrettierPluginsApplicationService;

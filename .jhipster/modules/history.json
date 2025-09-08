@@ -234,6 +234,20 @@
         "baseName": "seed4jSampleExtension",
         "nodePackageManager": "npm"
       }
+    },
+    {
+      "module": "custom-jhlite",
+      "date": "2025-09-08T06:19:42.764124908Z",
+      "properties": {
+        "endOfLine": "lf",
+        "springConfigurationFormat": "yaml",
+        "packageName": "com.seed4j.extension",
+        "projectName": "Seed4J Sample Extension",
+        "serverPort": 8080,
+        "indentSize": 2,
+        "baseName": "seed4jSampleExtension",
+        "nodePackageManager": "npm"
+      }
     }
   ]
 }

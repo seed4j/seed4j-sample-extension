@@ -1,7 +1,7 @@
 package com.seed4j.extension.generator.server.springboot.startupreport.infrastructure.primary;
 
-import static com.seed4j.extension.shared.slug.domain.JhliteExtensionSampleModuleSlug.*;
-import static tech.jhipster.lite.shared.slug.domain.JHLiteModuleSlug.SPRING_BOOT;
+import static com.seed4j.extension.shared.slug.domain.Seed4jSampleExtensionModuleSlug.*;
+import static tech.jhipster.lite.shared.slug.domain.JHLiteModuleSlug.*;
 
 import com.seed4j.extension.generator.server.springboot.startupreport.application.SpringBootStartupReportApplicationService;
 import org.springframework.context.annotation.Bean;

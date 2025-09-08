@@ -3,7 +3,7 @@ package com.seed4j.extension.generator.server.springboot.startupreport.domain;
 import static tech.jhipster.lite.module.infrastructure.secondary.JHipsterModulesAssertions.*;
 
 import com.seed4j.extension.UnitTest;
-import com.seed4j.extension.shared.dependencies.infrastructure.secondary.JhliteExtensionSampleMavenDependenciesReader;
+import com.seed4j.extension.shared.dependencies.infrastructure.secondary.Seed4jSampleExtensionMavenDependenciesReader;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ class SpringBootStartupReportModuleFactoryTest {
 
   @BeforeEach
   void setup() {
-    TestJHipsterModules.register(new JhliteExtensionSampleMavenDependenciesReader(new FileSystemProjectFiles()));
+    TestJHipsterModules.register(new Seed4jSampleExtensionMavenDependenciesReader(new FileSystemProjectFiles()));
   }
 
   @AfterEach

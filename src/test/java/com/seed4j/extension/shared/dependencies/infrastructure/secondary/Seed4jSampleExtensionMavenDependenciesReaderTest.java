@@ -17,13 +17,13 @@ import tech.jhipster.lite.module.domain.javadependency.Version;
 
 @UnitTest
 @ExtendWith(MockitoExtension.class)
-class JhliteExtensionSampleMavenDependenciesReaderTest {
+class Seed4jSampleExtensionMavenDependenciesReaderTest {
 
   @Mock
   private ProjectFiles projectFiles;
 
   @InjectMocks
-  private JhliteExtensionSampleMavenDependenciesReader reader;
+  private Seed4jSampleExtensionMavenDependenciesReader reader;
 
   @Test
   void shouldGetVersionFromCustomSource() {

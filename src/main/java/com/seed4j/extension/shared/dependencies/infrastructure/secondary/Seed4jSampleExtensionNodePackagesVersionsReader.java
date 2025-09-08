@@ -1,6 +1,6 @@
 package com.seed4j.extension.shared.dependencies.infrastructure.secondary;
 
-import com.seed4j.extension.shared.dependencies.domain.JhliteExtensionSampleNpmVersionSource;
+import com.seed4j.extension.shared.dependencies.domain.Seed4jSampleExtensionNodePackagesVersionSource;
 import java.util.List;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -12,14 +12,18 @@ import tech.jhipster.lite.module.infrastructure.secondary.nodejs.NodePackagesVer
 
 @Repository
 @Order(Ordered.HIGHEST_PRECEDENCE)
-public class JhliteExtensionSampleNpmVersionReader implements NodePackagesVersionsReader {
+public class Seed4jSampleExtensionNodePackagesVersionsReader implements NodePackagesVersionsReader {
 
-  private static final String PARENT_FOLDER = "/generator/jhlite-extension-sample-dependencies/";
+  private static final String PARENT_FOLDER = "/generator/seed4j-sample-extension-dependencies/";
 
   private final FileSystemNodePackagesVersionReader reader;
 
-  public JhliteExtensionSampleNpmVersionReader(ProjectFiles projectFiles) {
-    reader = new FileSystemNodePackagesVersionReader(projectFiles, List.of(JhliteExtensionSampleNpmVersionSource.values()), PARENT_FOLDER);
+  public Seed4jSampleExtensionNodePackagesVersionsReader(ProjectFiles projectFiles) {
+    reader = new FileSystemNodePackagesVersionReader(
+      projectFiles,
+      List.of(Seed4jSampleExtensionNodePackagesVersionSource.values()),
+      PARENT_FOLDER
+    );
   }
 
   @Override

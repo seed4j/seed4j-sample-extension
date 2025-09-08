@@ -3,7 +3,7 @@ package com.seed4j.extension.generator.prettier.properties.domain;
 import static tech.jhipster.lite.module.infrastructure.secondary.JHipsterModulesAssertions.*;
 
 import com.seed4j.extension.UnitTest;
-import com.seed4j.extension.shared.dependencies.infrastructure.secondary.JhliteExtensionSampleNpmVersionReader;
+import com.seed4j.extension.shared.dependencies.infrastructure.secondary.Seed4jSampleExtensionNodePackagesVersionsReader;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,7 +21,7 @@ class PrettierPluginsModuleFactoryTest {
 
   @BeforeEach
   void setup() {
-    TestJHipsterModules.register(new JhliteExtensionSampleNpmVersionReader(new FileSystemProjectFiles()));
+    TestJHipsterModules.register(new Seed4jSampleExtensionNodePackagesVersionsReader(new FileSystemProjectFiles()));
   }
 
   @AfterEach
