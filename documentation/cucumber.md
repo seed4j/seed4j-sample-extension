@@ -15,8 +15,6 @@ Feature: Simple WebService test
 You'll then have to define the glue code:
 
 ```java
-import static tech.jhipster.lite.extension.cucumber.rest.CucumberRestAssertions.*;
-
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;

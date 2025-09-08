@@ -1,8 +1,8 @@
 {
-  "name": "jhlite-extension-sample",
+  "name": "seed4j-sample-extension",
   "version": "0.0.0",
   "private": true,
-  "description": "JHLite Extension Sample",
+  "description": "Seed4J Sample Extension",
   "license": "UNLICENSED",
   "scripts": {
     "prepare": "husky",

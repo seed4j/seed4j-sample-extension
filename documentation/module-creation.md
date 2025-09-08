@@ -118,8 +118,6 @@ You can now run `CucumberTest` and ensure that it is failing as expected:
 To be used by JHLite, the `JHipsterModuleResource` needs to be a Spring bean so, let's create a configuration in `tech.jhipster.lite.extension.my_module.infrastructure.primary`:
 
 ```java
-import static tech.jhipster.lite.extension.slug.domain.MyAppModuleSlug.*;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import tech.jhipster.lite.extension.my_module.application.MyModuleApplicationService;
