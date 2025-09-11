@@ -1,4 +1,4 @@
-# JHLite Extension Sample
+# Seed4J Sample Extension
 
 [![Build Status][github-actions-image]][github-actions-url]
 

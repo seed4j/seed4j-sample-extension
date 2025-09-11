@@ -8,10 +8,10 @@ spring:
     default-property-inclusion: non_null
 logging:
   level:
-    tech:
-      jhipster:
-        lite:
-          extension: INFO
+    com:
+      seed4j:
+        extension: INFO
+
 jhlite:
   hidden-resources:
     # Disable the modules and its dependencies by slugs
