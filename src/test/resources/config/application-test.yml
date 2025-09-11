@@ -1,9 +1,8 @@
 logging:
   level:
-    tech:
-      jhipster:
-        lite:
-          extension: 'OFF'
+    com:
+      seed4j:
+        extension: 'OFF'
   config: classpath:logback.xml
 spring:
   main:
