@@ -1,6 +1,6 @@
 package com.seed4j.extension.cucumber;
 
-import com.seed4j.extension.Seed4jSampleExtensionApp;
+import com.seed4j.extension.Seed4JSampleExtensionApp;
 import com.seed4j.extension.cucumber.CucumberConfiguration.CucumberRestTemplateConfiguration;
 import com.seed4j.extension.cucumber.rest.CucumberRestTemplate;
 import io.cucumber.java.Before;
@@ -25,7 +25,7 @@ import tech.jhipster.lite.cucumber.rest.CucumberRestTestContext;
 @ActiveProfiles("test")
 @CucumberContextConfiguration
 @SpringBootTest(
-  classes = { Seed4jSampleExtensionApp.class, CucumberRestTemplateConfiguration.class },
+  classes = { Seed4JSampleExtensionApp.class, CucumberRestTemplateConfiguration.class },
   webEnvironment = WebEnvironment.RANDOM_PORT
 )
 public class CucumberConfiguration {

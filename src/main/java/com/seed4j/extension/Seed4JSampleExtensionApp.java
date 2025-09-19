@@ -8,14 +8,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 import tech.jhipster.lite.JHLiteApp;
 
-@SpringBootApplication(scanBasePackageClasses = { JHLiteApp.class, Seed4jSampleExtensionApp.class })
+@SpringBootApplication(scanBasePackageClasses = { JHLiteApp.class, Seed4JSampleExtensionApp.class })
 @ExcludeFromGeneratedCodeCoverage(reason = "Not testing logs")
-public class Seed4jSampleExtensionApp {
+public class Seed4JSampleExtensionApp {
 
-  private static final Logger log = LoggerFactory.getLogger(Seed4jSampleExtensionApp.class);
+  private static final Logger log = LoggerFactory.getLogger(Seed4JSampleExtensionApp.class);
 
   public static void main(String[] args) {
-    Environment env = SpringApplication.run(Seed4jSampleExtensionApp.class, args).getEnvironment();
+    Environment env = SpringApplication.run(Seed4JSampleExtensionApp.class, args).getEnvironment();
 
     if (log.isInfoEnabled()) {
       log.info(ApplicationStartupTraces.of(env));

@@ -13,7 +13,7 @@ import org.springframework.test.context.ActiveProfiles;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @DisplayNameGeneration(ReplaceCamelCase.class)
-@SpringBootTest(classes = { Seed4jSampleExtensionApp.class })
+@SpringBootTest(classes = { Seed4JSampleExtensionApp.class })
 public @interface IntegrationTest {
   @AliasFor(annotation = SpringBootTest.class)
   String[] properties() default {};
