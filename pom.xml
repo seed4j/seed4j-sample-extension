@@ -189,7 +189,7 @@
             </execution>
           </executions>
           <configuration>
-            <mainClass>com.seed4j.extension.Seed4jSampleExtensionApp</mainClass>
+            <mainClass>com.seed4j.extension.Seed4JSampleExtensionApp</mainClass>
           </configuration>
         </plugin>
         <plugin>
