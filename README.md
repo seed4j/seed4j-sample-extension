@@ -2,7 +2,7 @@
 
 [![Build Status][github-actions-image]][github-actions-url]
 
-## Prerequisites
+## Prerequisite
 
 ### Java
 
