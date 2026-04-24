@@ -66,7 +66,7 @@
       }
     },
     {
-      "module": "custom-jhlite",
+      "module": "seed4j-extension",
       "date": "2024-06-04T14:50:38.415852411Z",
       "properties": {
         "packageName": "com.seed4j.extension",
@@ -196,7 +196,7 @@
       }
     },
     {
-      "module": "custom-jhlite",
+      "module": "seed4j-extension",
       "date": "2024-12-09T15:09:55.910860780Z",
       "properties": {
         "endOfLine": "lf",
@@ -209,7 +209,7 @@
       }
     },
     {
-      "module": "custom-jhlite",
+      "module": "seed4j-extension",
       "date": "2025-03-25T06:54:14.589073925Z",
       "properties": {
         "endOfLine": "lf",
@@ -236,7 +236,7 @@
       }
     },
     {
-      "module": "custom-jhlite",
+      "module": "seed4j-extension",
       "date": "2025-09-08T06:19:42.764124908Z",
       "properties": {
         "endOfLine": "lf",
