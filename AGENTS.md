@@ -1,6 +1,7 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
+
 - Main code lives in `src/main/java/com/seed4j/extension`.
 - Feature modules follow hexagonal layers under `generator/**`: `application`, `domain`, and `infrastructure` (`primary`/`secondary`).
 - Shared cross-module utilities live in `shared/**`.
@@ -9,6 +10,7 @@
 - CI helper scripts are in `tests-ci/`; supporting docs are in `documentation/`.
 
 ## Build, Test, and Development Commands
+
 - `./mvnw`: run the app locally (`spring-boot:run` is the Maven default goal).
 - `./mvnw clean verify`: full build (unit + integration + cucumber tests, checkstyle, JaCoCo checks).
 - `./mvnw test`: fast test pass (Surefire; excludes `*IT*` and `*CucumberTest*`).
@@ -18,6 +20,7 @@
 - `npm run prettier:format`: apply formatting fixes.
 
 ## Coding Style & Naming Conventions
+
 - Follow `.editorconfig`: UTF-8, LF, final newline, 2-space indentation.
 - Java style is enforced by Checkstyle (`checkstyle.xml`): lower-case packages, `UpperCamelCase` types, `lowerCamelCase` methods/fields.
 - Use JUnit 5 (`org.junit.jupiter`); non-Jupiter `org.junit` imports are blocked.
@@ -25,6 +28,7 @@
 - Run Prettier for changed files (`.husky/pre-commit` executes `lint-staged`).
 
 ## Testing Guidelines
+
 - Frameworks: JUnit 5, AssertJ, Cucumber, Spring Boot Test.
 - Preferred test annotations: `@UnitTest`, `@ComponentTest`, `@IntegrationTest`.
 - Naming: unit/component tests as `*Test`; integration tests as `*IT*`; Cucumber launcher as `*CucumberTest*`.
@@ -32,6 +36,7 @@
 - Keep Gherkin scenarios in `src/test/features` and glue code in `src/test/java/.../cucumber`.
 
 ## Commit & Pull Request Guidelines
+
 - Follow existing history style: short imperative subjects (example: `Fix sonar configuration`).
 - Conventional commit prefixes are used for dependency automation (example: `chore(deps): ...`, `fix(deps): ...`).
 - Keep commits focused and atomic; avoid mixing refactors with behavior changes.
