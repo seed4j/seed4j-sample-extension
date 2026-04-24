@@ -1,14 +1,14 @@
 package com.seed4j.extension.generator.prettier.properties.domain;
 
 import static com.seed4j.extension.shared.dependencies.domain.Seed4jSampleExtensionNodePackagesVersionSource.SEED4J_SAMPLE_EXTENSION;
-import static tech.jhipster.lite.module.domain.JHipsterModule.*;
+import static com.seed4j.module.domain.Seed4JModule.*;
 
-import tech.jhipster.lite.module.domain.JHipsterModule;
-import tech.jhipster.lite.module.domain.properties.JHipsterModuleProperties;
+import com.seed4j.module.domain.Seed4JModule;
+import com.seed4j.module.domain.properties.Seed4JModuleProperties;
 
 public class PrettierPluginsModuleFactory {
 
-  public JHipsterModule buildPropertiesPluginModule(JHipsterModuleProperties properties) {
+  public Seed4JModule buildPropertiesPluginModule(Seed4JModuleProperties properties) {
     //@formatter:off
     return moduleBuilder(properties)
       .packageJson()

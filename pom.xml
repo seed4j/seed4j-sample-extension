@@ -52,9 +52,9 @@
       <artifactId>commons-lang3</artifactId>
     </dependency>
     <dependency>
-      <groupId>tech.jhipster.lite</groupId>
-      <artifactId>jhlite</artifactId>
-      <version>${jhlite.version}</version>
+      <groupId>com.seed4j</groupId>
+      <artifactId>seed4j</artifactId>
+      <version>${seed4j.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -82,9 +82,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>tech.jhipster.lite</groupId>
-      <artifactId>jhlite</artifactId>
-      <version>${jhlite.version}</version>
+      <groupId>com.seed4j</groupId>
+      <artifactId>seed4j</artifactId>
+      <version>${seed4j.version}</version>
       <type>test-jar</type>
       <classifier>tests</classifier>
       <scope>test</scope>
@@ -113,7 +113,7 @@
     <spring-boot.version>3.5.4</spring-boot.version>
     <junit-jupiter.version>5.13.3</junit-jupiter.version>
     <cucumber.version>7.28.1</cucumber.version>
-    <jhlite.version>1.35.0</jhlite.version>
+    <seed4j.version>2.2.0</seed4j.version>
     <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
     <checkstyle.version>13.3.0</checkstyle.version>
     <jacoco.version>0.8.13</jacoco.version>

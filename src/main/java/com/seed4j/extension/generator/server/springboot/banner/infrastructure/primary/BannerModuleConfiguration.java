@@ -4,10 +4,10 @@ import static com.seed4j.extension.shared.slug.domain.Seed4jSampleExtensionFeatu
 import static com.seed4j.extension.shared.slug.domain.Seed4jSampleExtensionModuleSlug.*;
 
 import com.seed4j.extension.generator.server.springboot.banner.application.BannerApplicationService;
+import com.seed4j.module.domain.resource.Seed4JModuleOrganization;
+import com.seed4j.module.domain.resource.Seed4JModuleResource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import tech.jhipster.lite.module.domain.resource.JHipsterModuleOrganization;
-import tech.jhipster.lite.module.domain.resource.JHipsterModuleResource;
 
 @Configuration
 class BannerModuleConfiguration {
@@ -19,8 +19,8 @@ class BannerModuleConfiguration {
   private static final String BANNER_TAG = "banner";
 
   @Bean
-  JHipsterModuleResource jhipsterV7BannerResource(BannerApplicationService banners) {
-    return JHipsterModuleResource.builder()
+  Seed4JModuleResource jhipsterV7BannerResource(BannerApplicationService banners) {
+    return Seed4JModuleResource.builder()
       .slug(BANNER_JHIPSTER_V7)
       .withoutProperties()
       .apiDoc(GROUP, "Add banner JHipster v7 for Angular")
@@ -30,8 +30,8 @@ class BannerModuleConfiguration {
   }
 
   @Bean
-  JHipsterModuleResource jhipsterV7ReactBannerResource(BannerApplicationService banners) {
-    return JHipsterModuleResource.builder()
+  Seed4JModuleResource jhipsterV7ReactBannerResource(BannerApplicationService banners) {
+    return Seed4JModuleResource.builder()
       .slug(BANNER_JHIPSTER_V7_REACT)
       .withoutProperties()
       .apiDoc(GROUP, "Add banner JHipster v7 for React")
@@ -41,8 +41,8 @@ class BannerModuleConfiguration {
   }
 
   @Bean
-  JHipsterModuleResource jhipsterV7VueBannerResource(BannerApplicationService banners) {
-    return JHipsterModuleResource.builder()
+  Seed4JModuleResource jhipsterV7VueBannerResource(BannerApplicationService banners) {
+    return Seed4JModuleResource.builder()
       .slug(BANNER_JHIPSTER_V7_VUE)
       .withoutProperties()
       .apiDoc(GROUP, "Add banner JHipster v7 for Vue")
@@ -52,8 +52,8 @@ class BannerModuleConfiguration {
   }
 
   @Bean
-  JHipsterModuleResource jhipsterV2BannerResource(BannerApplicationService banners) {
-    return JHipsterModuleResource.builder()
+  Seed4JModuleResource jhipsterV2BannerResource(BannerApplicationService banners) {
+    return Seed4JModuleResource.builder()
       .slug(BANNER_JHIPSTER_V2)
       .withoutProperties()
       .apiDoc(GROUP, "Add banner JHipster v2")
@@ -63,8 +63,8 @@ class BannerModuleConfiguration {
   }
 
   @Bean
-  JHipsterModuleResource jhipsterV3BannerResource(BannerApplicationService banners) {
-    return JHipsterModuleResource.builder()
+  Seed4JModuleResource jhipsterV3BannerResource(BannerApplicationService banners) {
+    return Seed4JModuleResource.builder()
       .slug(BANNER_JHIPSTER_V3)
       .withoutProperties()
       .apiDoc(GROUP, "Add banner JHipster v3")
@@ -73,10 +73,10 @@ class BannerModuleConfiguration {
       .factory(banners::buildJHipsterV3Banner);
   }
 
-  private JHipsterModuleOrganization organization() {
-    return JHipsterModuleOrganization.builder()
+  private Seed4JModuleOrganization organization() {
+    return Seed4JModuleOrganization.builder()
       .feature(BANNER)
-      .addDependency(tech.jhipster.lite.shared.slug.domain.JHLiteModuleSlug.SPRING_BOOT)
+      .addDependency(com.seed4j.shared.slug.domain.Seed4JCoreModuleSlug.SPRING_BOOT)
       .build();
   }
 }

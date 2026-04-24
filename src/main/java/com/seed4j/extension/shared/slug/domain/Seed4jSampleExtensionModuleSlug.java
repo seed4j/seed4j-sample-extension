@@ -1,18 +1,18 @@
 package com.seed4j.extension.shared.slug.domain;
 
-import static tech.jhipster.lite.module.domain.resource.JHipsterModuleRank.*;
+import static com.seed4j.module.domain.resource.Seed4JModuleRank.*;
 
 import com.seed4j.extension.shared.generation.domain.ExcludeFromGeneratedCodeCoverage;
+import com.seed4j.module.domain.resource.Seed4JModuleRank;
+import com.seed4j.module.domain.resource.Seed4JModuleSlugFactory;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import tech.jhipster.lite.module.domain.resource.JHipsterModuleRank;
-import tech.jhipster.lite.module.domain.resource.JHipsterModuleSlugFactory;
 
 @ExcludeFromGeneratedCodeCoverage
-public enum Seed4jSampleExtensionModuleSlug implements JHipsterModuleSlugFactory {
+public enum Seed4jSampleExtensionModuleSlug implements Seed4JModuleSlugFactory {
   BANNER_JHIPSTER_V2("banner-jhipster-v2", RANK_D),
   BANNER_JHIPSTER_V3("banner-jhipster-v3", RANK_D),
   BANNER_JHIPSTER_V7("banner-jhipster-v7", RANK_D),
@@ -22,15 +22,15 @@ public enum Seed4jSampleExtensionModuleSlug implements JHipsterModuleSlugFactory
   SPRING_BOOT_STARTUP_REPORT("spring-boot-startup-report", RANK_D);
 
   // Add here the slugs of your modules
-  // e.g.: MY_MODULE("my-module", JHipsterModuleRank.RANK_B),
+  // e.g.: MY_MODULE("my-module", Seed4JModuleRank.RANK_B),
   private static final Map<String, Seed4jSampleExtensionModuleSlug> moduleSlugMap = Stream.of(values()).collect(
     Collectors.toMap(Seed4jSampleExtensionModuleSlug::get, Function.identity())
   );
   private final String slug;
-  private final JHipsterModuleRank rank;
+  private final Seed4JModuleRank rank;
 
   @SuppressWarnings("java:S1144")
-  Seed4jSampleExtensionModuleSlug(String slug, JHipsterModuleRank rank) {
+  Seed4jSampleExtensionModuleSlug(String slug, Seed4JModuleRank rank) {
     this.slug = slug;
     this.rank = rank;
   }
@@ -41,7 +41,7 @@ public enum Seed4jSampleExtensionModuleSlug implements JHipsterModuleSlugFactory
   }
 
   @Override
-  public JHipsterModuleRank rank() {
+  public Seed4JModuleRank rank() {
     return rank;
   }
 
