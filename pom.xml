@@ -98,7 +98,7 @@
   </dependencies>
 
   <properties>
-    <java.version>21</java.version>
+    <java.version>25</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -115,6 +115,7 @@
     <cucumber.version>7.28.1</cucumber.version>
     <jhlite.version>1.35.0</jhlite.version>
     <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
+    <checkstyle.version>13.3.0</checkstyle.version>
     <jacoco.version>0.8.13</jacoco.version>
     <properties-maven-plugin.version>1.2.1</properties-maven-plugin.version>
     <sonar-maven-plugin.version>5.1.0.4751</sonar-maven-plugin.version>
@@ -372,11 +373,24 @@
             </goals>
           </execution>
         </executions>
+        <dependencies>
+          <dependency>
+            <groupId>com.puppycrawl.tools</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>${checkstyle.version}</version>
+          </dependency>
+        </dependencies>
         <configuration>
           <configLocation>checkstyle.xml</configLocation>
-          <includeTestSourceDirectory>true</includeTestSourceDirectory>
           <consoleOutput>true</consoleOutput>
           <failsOnError>true</failsOnError>
+          <includeTestSourceDirectory>true</includeTestSourceDirectory>
+          <sourceDirectories>
+            <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+          </sourceDirectories>
+          <testSourceDirectories>
+            <testSourceDirectory>${project.build.testSourceDirectory}</testSourceDirectory>
+          </testSourceDirectories>
         </configuration>
       </plugin>
       <plugin>
