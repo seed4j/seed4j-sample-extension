@@ -1,0 +1,14 @@
+{
+  "module": "application-service-hexagonal-architecture-documentation",
+  "date": "2026-04-24T14:09:22.621997787Z",
+  "properties": {
+    "endOfLine": "lf",
+    "springConfigurationFormat": "yaml",
+    "packageName": "com.seed4j.extension",
+    "projectName": "Seed4J Sample Extension",
+    "serverPort": 8080,
+    "indentSize": 2,
+    "nodePackageManager": "npm",
+    "baseName": "seed4jSampleExtension"
+  }
+}
