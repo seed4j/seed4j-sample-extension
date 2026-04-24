@@ -5,15 +5,15 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 import com.seed4j.extension.UnitTest;
+import com.seed4j.module.domain.ProjectFiles;
+import com.seed4j.module.domain.javabuild.VersionSlug;
+import com.seed4j.module.domain.javadependency.JavaDependencyVersion;
+import com.seed4j.module.domain.javadependency.Version;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import tech.jhipster.lite.module.domain.ProjectFiles;
-import tech.jhipster.lite.module.domain.javabuild.VersionSlug;
-import tech.jhipster.lite.module.domain.javadependency.JavaDependencyVersion;
-import tech.jhipster.lite.module.domain.javadependency.Version;
 
 @UnitTest
 @ExtendWith(MockitoExtension.class)

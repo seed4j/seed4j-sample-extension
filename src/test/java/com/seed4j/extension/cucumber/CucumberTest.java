@@ -15,7 +15,7 @@ import org.junit.platform.suite.api.Suite;
 @SelectDirectories("src/test/features")
 @ConfigurationParameter(
   key = GLUE_PROPERTY_NAME,
-  value = "com.seed4j.extension, tech.jhipster.lite.module.infrastructure.primary, tech.jhipster.lite.project.infrastructure.primary"
+  value = "com.seed4j.extension, com.seed4j.module.infrastructure.primary, com.seed4j.project.infrastructure.primary"
 )
 @ConfigurationParameter(
   key = PLUGIN_PROPERTY_NAME,
