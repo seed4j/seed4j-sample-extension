@@ -26,7 +26,7 @@ npm install
 
 ## Local environment
 
-<!-- jhipster-needle-localEnvironment -->
+<!-- seed4j-needle-localEnvironment -->
 
 ## Start up
 
@@ -42,7 +42,7 @@ docker compose -f src/main/docker/sonar.yml up -d
 ./mvnw clean verify sonar:sonar
 ```
 
-<!-- jhipster-needle-startupCommand -->
+<!-- seed4j-needle-startupCommand -->
 
 ## Documentation
 
@@ -53,7 +53,7 @@ docker compose -f src/main/docker/sonar.yml up -d
 - [Hexagonal architecture](documentation/hexagonal-architecture.md)
 - [sonar](documentation/sonar.md)
 
-<!-- jhipster-needle-documentation -->
+<!-- seed4j-needle-documentation -->
 
 [github-actions-image]: https://github.com/seed4j/seed4j-sample-extension/workflows/build/badge.svg
 [github-actions-url]: https://github.com/seed4j/seed4j-sample-extension/actions
