@@ -19,58 +19,58 @@ class BannerModuleConfiguration {
   private static final String BANNER_TAG = "banner";
 
   @Bean
-  Seed4JModuleResource jhipsterV7BannerResource(BannerApplicationService banners) {
+  Seed4JModuleResource seed4JV7BannerResource(BannerApplicationService banners) {
     return Seed4JModuleResource.builder()
-      .slug(BANNER_JHIPSTER_V7)
+      .slug(BANNER_SEED4J_V7)
       .withoutProperties()
-      .apiDoc(GROUP, "Add banner JHipster v7 for Angular")
+      .apiDoc(GROUP, "Add banner Seed4J v7 for Angular")
       .organization(organization())
       .tags(SERVER, SPRING, SPRING_BOOT_TAG, BANNER_TAG)
-      .factory(banners::buildJHipsterV7Banner);
+      .factory(banners::buildSeed4JV7Banner);
   }
 
   @Bean
-  Seed4JModuleResource jhipsterV7ReactBannerResource(BannerApplicationService banners) {
+  Seed4JModuleResource seed4JV7ReactBannerResource(BannerApplicationService banners) {
     return Seed4JModuleResource.builder()
-      .slug(BANNER_JHIPSTER_V7_REACT)
+      .slug(BANNER_SEED4J_V7_REACT)
       .withoutProperties()
-      .apiDoc(GROUP, "Add banner JHipster v7 for React")
+      .apiDoc(GROUP, "Add banner Seed4J v7 for React")
       .organization(organization())
       .tags(SERVER, SPRING, SPRING_BOOT_TAG, BANNER_TAG)
-      .factory(banners::buildJHipsterV7ReactBanner);
+      .factory(banners::buildSeed4JV7ReactBanner);
   }
 
   @Bean
-  Seed4JModuleResource jhipsterV7VueBannerResource(BannerApplicationService banners) {
+  Seed4JModuleResource seed4JV7VueBannerResource(BannerApplicationService banners) {
     return Seed4JModuleResource.builder()
-      .slug(BANNER_JHIPSTER_V7_VUE)
+      .slug(BANNER_SEED4J_V7_VUE)
       .withoutProperties()
-      .apiDoc(GROUP, "Add banner JHipster v7 for Vue")
+      .apiDoc(GROUP, "Add banner Seed4J v7 for Vue")
       .organization(organization())
       .tags(SERVER, SPRING, SPRING_BOOT_TAG, BANNER_TAG)
-      .factory(banners::buildJHipsterV7VueBanner);
+      .factory(banners::buildSeed4JV7VueBanner);
   }
 
   @Bean
-  Seed4JModuleResource jhipsterV2BannerResource(BannerApplicationService banners) {
+  Seed4JModuleResource seed4JV2BannerResource(BannerApplicationService banners) {
     return Seed4JModuleResource.builder()
-      .slug(BANNER_JHIPSTER_V2)
+      .slug(BANNER_SEED4J_V2)
       .withoutProperties()
-      .apiDoc(GROUP, "Add banner JHipster v2")
+      .apiDoc(GROUP, "Add banner Seed4J v2")
       .organization(organization())
       .tags(SERVER, SPRING, SPRING_BOOT_TAG, BANNER_TAG)
-      .factory(banners::buildJHipsterV2Banner);
+      .factory(banners::buildSeed4JV2Banner);
   }
 
   @Bean
-  Seed4JModuleResource jhipsterV3BannerResource(BannerApplicationService banners) {
+  Seed4JModuleResource seed4JV3BannerResource(BannerApplicationService banners) {
     return Seed4JModuleResource.builder()
-      .slug(BANNER_JHIPSTER_V3)
+      .slug(BANNER_SEED4J_V3)
       .withoutProperties()
-      .apiDoc(GROUP, "Add banner JHipster v3")
+      .apiDoc(GROUP, "Add banner Seed4J v3")
       .organization(organization())
       .tags(SERVER, SPRING, SPRING_BOOT_TAG, BANNER_TAG)
-      .factory(banners::buildJHipsterV3Banner);
+      .factory(banners::buildSeed4JV3Banner);
   }
 
   private Seed4JModuleOrganization organization() {

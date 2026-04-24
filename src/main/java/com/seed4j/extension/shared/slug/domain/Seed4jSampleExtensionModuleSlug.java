@@ -13,11 +13,11 @@ import java.util.stream.Stream;
 
 @ExcludeFromGeneratedCodeCoverage
 public enum Seed4jSampleExtensionModuleSlug implements Seed4JModuleSlugFactory {
-  BANNER_JHIPSTER_V2("banner-jhipster-v2", RANK_D),
-  BANNER_JHIPSTER_V3("banner-jhipster-v3", RANK_D),
-  BANNER_JHIPSTER_V7("banner-jhipster-v7", RANK_D),
-  BANNER_JHIPSTER_V7_REACT("banner-jhipster-v7-react", RANK_D),
-  BANNER_JHIPSTER_V7_VUE("banner-jhipster-v7-vue", RANK_D),
+  BANNER_SEED4J_V2("banner-seed4j-v2", RANK_D),
+  BANNER_SEED4J_V3("banner-seed4j-v3", RANK_D),
+  BANNER_SEED4J_V7("banner-seed4j-v7", RANK_D),
+  BANNER_SEED4J_V7_REACT("banner-seed4j-v7-react", RANK_D),
+  BANNER_SEED4J_V7_VUE("banner-seed4j-v7-vue", RANK_D),
   PRETTIER_PLUGIN_PROPERTIES("prettier-plugin-properties", RANK_D),
   SPRING_BOOT_STARTUP_REPORT("spring-boot-startup-report", RANK_D);
 

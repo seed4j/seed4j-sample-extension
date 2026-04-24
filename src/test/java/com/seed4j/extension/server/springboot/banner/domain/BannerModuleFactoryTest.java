@@ -16,41 +16,41 @@ class BannerModuleFactoryTest {
   private static final String BANNER_TXT = "src/main/resources/banner.txt";
 
   @Test
-  @DisplayName("JHipster Banner V7")
-  void shouldCreateModuleJHipsterBannerV7() {
-    Seed4JModule module = factory.buildModuleBannerJHipsterV7(testModuleProperties());
+  @DisplayName("Seed4J Banner V7")
+  void shouldCreateModuleSeed4JBannerV7() {
+    Seed4JModule module = factory.buildModuleBannerSeed4JV7(testModuleProperties());
 
     assertThatModule(module).hasFiles(BANNER_TXT);
   }
 
   @Test
-  @DisplayName("JHipster Banner V7 React")
-  void shouldCreateModuleJHipsterBannerV7React() {
-    Seed4JModule module = factory.buildModuleBannerJHipsterV7React(testModuleProperties());
+  @DisplayName("Seed4J Banner V7 React")
+  void shouldCreateModuleSeed4JBannerV7React() {
+    Seed4JModule module = factory.buildModuleBannerSeed4JV7React(testModuleProperties());
 
     assertThatModule(module).hasFiles(BANNER_TXT);
   }
 
   @Test
-  @DisplayName("JHipster Banner V7 Vue")
-  void shouldCreateModuleJHipsterBannerV7Vue() {
-    Seed4JModule module = factory.buildModuleBannerJHipsterV7Vue(testModuleProperties());
+  @DisplayName("Seed4J Banner V7 Vue")
+  void shouldCreateModuleSeed4JBannerV7Vue() {
+    Seed4JModule module = factory.buildModuleBannerSeed4JV7Vue(testModuleProperties());
 
     assertThatModule(module).hasFiles(BANNER_TXT);
   }
 
   @Test
-  @DisplayName("JHipster Banner V2")
-  void shouldCreateModuleJHipsterBannerV2() {
-    Seed4JModule module = factory.buildModuleBannerJHipsterV2(testModuleProperties());
+  @DisplayName("Seed4J Banner V2")
+  void shouldCreateModuleSeed4JBannerV2() {
+    Seed4JModule module = factory.buildModuleBannerSeed4JV2(testModuleProperties());
 
     assertThatModule(module).hasFiles(BANNER_TXT);
   }
 
   @Test
-  @DisplayName("JHipster Banner V3")
-  void shouldCreateModuleJHipsterBannerV3() {
-    Seed4JModule module = factory.buildModuleBannerJHipsterV3(testModuleProperties());
+  @DisplayName("Seed4J Banner V3")
+  void shouldCreateModuleSeed4JBannerV3() {
+    Seed4JModule module = factory.buildModuleBannerSeed4JV3(testModuleProperties());
 
     assertThatModule(module).hasFiles(BANNER_TXT);
   }

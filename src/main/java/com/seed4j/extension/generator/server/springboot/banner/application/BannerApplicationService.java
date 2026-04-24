@@ -14,23 +14,23 @@ public class BannerApplicationService {
     this.factory = new BannerModuleFactory();
   }
 
-  public Seed4JModule buildJHipsterV7Banner(Seed4JModuleProperties properties) {
-    return factory.buildModuleBannerJHipsterV7(properties);
+  public Seed4JModule buildSeed4JV7Banner(Seed4JModuleProperties properties) {
+    return factory.buildModuleBannerSeed4JV7(properties);
   }
 
-  public Seed4JModule buildJHipsterV7ReactBanner(Seed4JModuleProperties properties) {
-    return factory.buildModuleBannerJHipsterV7React(properties);
+  public Seed4JModule buildSeed4JV7ReactBanner(Seed4JModuleProperties properties) {
+    return factory.buildModuleBannerSeed4JV7React(properties);
   }
 
-  public Seed4JModule buildJHipsterV7VueBanner(Seed4JModuleProperties properties) {
-    return factory.buildModuleBannerJHipsterV7Vue(properties);
+  public Seed4JModule buildSeed4JV7VueBanner(Seed4JModuleProperties properties) {
+    return factory.buildModuleBannerSeed4JV7Vue(properties);
   }
 
-  public Seed4JModule buildJHipsterV2Banner(Seed4JModuleProperties properties) {
-    return factory.buildModuleBannerJHipsterV2(properties);
+  public Seed4JModule buildSeed4JV2Banner(Seed4JModuleProperties properties) {
+    return factory.buildModuleBannerSeed4JV2(properties);
   }
 
-  public Seed4JModule buildJHipsterV3Banner(Seed4JModuleProperties properties) {
-    return factory.buildModuleBannerJHipsterV3(properties);
+  public Seed4JModule buildSeed4JV3Banner(Seed4JModuleProperties properties) {
+    return factory.buildModuleBannerSeed4JV3(properties);
   }
 }

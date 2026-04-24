@@ -13,29 +13,29 @@ public class BannerModuleFactory {
   private static final String SOURCE_FOLDER = "server/springboot/banner";
   private static final String PROPERTIES = "properties";
 
-  public Seed4JModule buildModuleBannerJHipsterV7(Seed4JModuleProperties properties) {
+  public Seed4JModule buildModuleBannerSeed4JV7(Seed4JModuleProperties properties) {
     Assert.notNull(PROPERTIES, properties);
-    return buildModuleBanner(properties, "banner-jhipster-v7.txt");
+    return buildModuleBanner(properties, "banner-seed4j-v7.txt");
   }
 
-  public Seed4JModule buildModuleBannerJHipsterV7React(Seed4JModuleProperties properties) {
+  public Seed4JModule buildModuleBannerSeed4JV7React(Seed4JModuleProperties properties) {
     Assert.notNull(PROPERTIES, properties);
-    return buildModuleBanner(properties, "banner-jhipster-v7-react.txt");
+    return buildModuleBanner(properties, "banner-seed4j-v7-react.txt");
   }
 
-  public Seed4JModule buildModuleBannerJHipsterV7Vue(Seed4JModuleProperties properties) {
+  public Seed4JModule buildModuleBannerSeed4JV7Vue(Seed4JModuleProperties properties) {
     Assert.notNull(PROPERTIES, properties);
-    return buildModuleBanner(properties, "banner-jhipster-v7-vue.txt");
+    return buildModuleBanner(properties, "banner-seed4j-v7-vue.txt");
   }
 
-  public Seed4JModule buildModuleBannerJHipsterV2(Seed4JModuleProperties properties) {
+  public Seed4JModule buildModuleBannerSeed4JV2(Seed4JModuleProperties properties) {
     Assert.notNull(PROPERTIES, properties);
-    return buildModuleBanner(properties, "banner-jhipster-v2.txt");
+    return buildModuleBanner(properties, "banner-seed4j-v2.txt");
   }
 
-  public Seed4JModule buildModuleBannerJHipsterV3(Seed4JModuleProperties properties) {
+  public Seed4JModule buildModuleBannerSeed4JV3(Seed4JModuleProperties properties) {
     Assert.notNull(PROPERTIES, properties);
-    return buildModuleBanner(properties, "banner-jhipster-v3.txt");
+    return buildModuleBanner(properties, "banner-seed4j-v3.txt");
   }
 
   private Seed4JModule buildModuleBanner(Seed4JModuleProperties properties, String file) {
