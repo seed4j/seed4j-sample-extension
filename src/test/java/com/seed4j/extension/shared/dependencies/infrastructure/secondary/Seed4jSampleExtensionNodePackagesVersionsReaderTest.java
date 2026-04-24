@@ -6,14 +6,14 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 import com.seed4j.extension.UnitTest;
+import com.seed4j.module.domain.ProjectFiles;
+import com.seed4j.module.domain.nodejs.NodePackageName;
+import com.seed4j.module.domain.nodejs.NodePackageVersion;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import tech.jhipster.lite.module.domain.ProjectFiles;
-import tech.jhipster.lite.module.domain.nodejs.NodePackageName;
-import tech.jhipster.lite.module.domain.nodejs.NodePackageVersion;
 
 @UnitTest
 @ExtendWith(MockitoExtension.class)

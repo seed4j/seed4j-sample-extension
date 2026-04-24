@@ -11,7 +11,7 @@ So, this is basically about why and how to use a peculiar flavor of [hexagonal a
 
 ## Disclaimers
 
-- This documentation is a [JHipster Lite](https://github.com/jhipster/jhipster-lite) module. This **probably doesn't fit your exact needs, you'll have to adapt it!**;
+- This documentation is a [Seed4J](https://github.com/seed4j/seed4j) module. This **probably doesn't fit your exact needs, you'll have to adapt it!**;
 - This is one of the many possible implementations of this architecture. If you are not comfortable with this one, just stick to one that helps you;
 - Code architectures are here to help us build great software faster, if it's failing there is probably something to change.
 
@@ -31,7 +31,7 @@ We often talk about three types of complexity:
 
 - **Essential**: When building Software we have to solve a problem of complexity X: this is the essential complexity. This complexity directly relates to the problem we are trying to solve and we can't really make that lower.
 - **Mandatory**: No matter the efforts, we are going to have to add some complexity to the system since we have technical stuff to do (persist data, send messages, ...). This complexity is called mandatory complexity.
-- **Accidental**: On top of the two previous complexities comes the accidental complexity, the one we don't want because it's not needed. Example: if you have a configuration that is standing still for the past 10 years you probably don't need to put that in a database, handling that in code will be easier and more efficient (and no, you probably don't need microservices with one team of 3).
+- **Accidental**: On top of the two previous complexities comes the accidental complexity, the one we don't want because it's unnecessary. Example: if you have a configuration that is standing still for the past 10 years you probably don't need to put that in a database, handling that in code will be easier and more efficient (and no, you probably don't need microservices with one team of 3).
 
 The hexagonal architecture allows us to reduce all those complexities to their bare minimum by giving clear responsibilities to each part of our Software.
 
@@ -60,7 +60,7 @@ We said earlier that pairs feedbacks were the fastest ones but what about busine
 
 ### Delay infrastructure choices
 
-It's common to start a project with meetings to "build the architecture" which, in that case, means choosing the infrastructure elements. So, at day 0, we are trying to figure out if we need a MongoDB, a PostgreSQL or both (and what about an Elasticsearch?).
+It's common to start a project with meetings to "build the architecture" which, in that case, means choosing the infrastructure elements. So, on day 0, we are trying to figure out if we need a MongoDB, a PostgreSQL or both (and what about an Elasticsearch?).
 
 Problem is: we often make these choices without enough information and we'll just make our best guesses (since the real needs will come from the code). The other problem is that we spend a lot of time doing that. Another option would be to pick only one thing: the language (do we go Java?). Picking the language can be challenging enough, but it's easier than picking a gazillion technologies along with the language.
 
@@ -108,7 +108,7 @@ Apart from the code used to make the business operations we'll find ports in the
 
 The application layer **MUST NOT CONTAIN ANY BUSINESS RULE**, its responsibilities are:
 
-- Very simple orchestration:
+- Basic orchestration:
   - Get something from a port;
   - Make an operation on that thing (call a method on the object);
   - Save that thing using a port;

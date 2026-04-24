@@ -1,9 +1,9 @@
 package com.seed4j.extension.generator.server.springboot.startupreport.application;
 
 import com.seed4j.extension.generator.server.springboot.startupreport.domain.SpringBootStartupReportModuleFactory;
+import com.seed4j.module.domain.Seed4JModule;
+import com.seed4j.module.domain.properties.Seed4JModuleProperties;
 import org.springframework.stereotype.Service;
-import tech.jhipster.lite.module.domain.JHipsterModule;
-import tech.jhipster.lite.module.domain.properties.JHipsterModuleProperties;
 
 @Service
 public class SpringBootStartupReportApplicationService {
@@ -14,7 +14,7 @@ public class SpringBootStartupReportApplicationService {
     this.factory = new SpringBootStartupReportModuleFactory();
   }
 
-  public JHipsterModule buildModule(JHipsterModuleProperties properties) {
+  public Seed4JModule buildModule(Seed4JModuleProperties properties) {
     return factory.buildModule(properties);
   }
 }

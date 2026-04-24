@@ -1,9 +1,9 @@
 package com.seed4j.extension.generator.server.springboot.banner.application;
 
 import com.seed4j.extension.generator.server.springboot.banner.domain.BannerModuleFactory;
+import com.seed4j.module.domain.Seed4JModule;
+import com.seed4j.module.domain.properties.Seed4JModuleProperties;
 import org.springframework.stereotype.Service;
-import tech.jhipster.lite.module.domain.JHipsterModule;
-import tech.jhipster.lite.module.domain.properties.JHipsterModuleProperties;
 
 @Service
 public class BannerApplicationService {
@@ -14,23 +14,23 @@ public class BannerApplicationService {
     this.factory = new BannerModuleFactory();
   }
 
-  public JHipsterModule buildJHipsterV7Banner(JHipsterModuleProperties properties) {
-    return factory.buildModuleBannerJHipsterV7(properties);
+  public Seed4JModule buildSeed4JV7Banner(Seed4JModuleProperties properties) {
+    return factory.buildModuleBannerSeed4JV7(properties);
   }
 
-  public JHipsterModule buildJHipsterV7ReactBanner(JHipsterModuleProperties properties) {
-    return factory.buildModuleBannerJHipsterV7React(properties);
+  public Seed4JModule buildSeed4JV7ReactBanner(Seed4JModuleProperties properties) {
+    return factory.buildModuleBannerSeed4JV7React(properties);
   }
 
-  public JHipsterModule buildJHipsterV7VueBanner(JHipsterModuleProperties properties) {
-    return factory.buildModuleBannerJHipsterV7Vue(properties);
+  public Seed4JModule buildSeed4JV7VueBanner(Seed4JModuleProperties properties) {
+    return factory.buildModuleBannerSeed4JV7Vue(properties);
   }
 
-  public JHipsterModule buildJHipsterV2Banner(JHipsterModuleProperties properties) {
-    return factory.buildModuleBannerJHipsterV2(properties);
+  public Seed4JModule buildSeed4JV2Banner(Seed4JModuleProperties properties) {
+    return factory.buildModuleBannerSeed4JV2(properties);
   }
 
-  public JHipsterModule buildJHipsterV3Banner(JHipsterModuleProperties properties) {
-    return factory.buildModuleBannerJHipsterV3(properties);
+  public Seed4JModule buildSeed4JV3Banner(Seed4JModuleProperties properties) {
+    return factory.buildModuleBannerSeed4JV3(properties);
   }
 }

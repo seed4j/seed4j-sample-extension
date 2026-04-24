@@ -1,29 +1,29 @@
-# Creating a JHLite module
+# Creating a Seed4J module
 
-So you want to create a JHLite module? Great!
+So you want to create a Seed4J module? Great!
 
 For that, you'll need to provide 2 main parts:
 
-- `JHipsterModuleResource`: describe the module organization, it is used to generate the APIs;
-- `JHipsterModule`: describe the changes done by the module.
+- `Seed4JModuleResource`: describe the module organization, it is used to generate the APIs;
+- `Seed4JModule`: describe the changes done by the module.
 
-You can start by the element you prefer but to create a `JHipsterModuleResource` you'll need to be able to build a `JHipsterModule`.
+You can start by the element you prefer but to create a `Seed4JModuleResource` you'll need to be able to build a `Seed4JModule`.
 
-## Creating a JHipsterModule
+## Creating a Seed4JModule
 
-In fact, you don't just need to create one `JHipsterModule`, you'll need a factory able to create them since each instance depends on the properties chosen by the users.
+In fact, you don't just need to create one `Seed4JModule`, you'll need a factory able to create them since each instance depends on the properties chosen by the users.
 
-So, as this is the business of JHLite you probably want to create a `com.seed4j.extension.my_module.domain` package. And you can start with a simple test:
+So, as this is the business of Seed4J you probably want to create a `com.seed4j.extension.my_module.domain` package. And you can start with a simple test:
 
 ```java
-import static tech.jhipster.lite.module.infrastructure.secondary.JHipsterModulesAssertions.*;
+import static com.seed4j.module.infrastructure.secondary.Seed4JModulesAssertions.*;
 
+import com.seed4j.TestFileUtils;
+import com.seed4j.UnitTest;
+import com.seed4j.module.domain.Seed4JModule;
+import com.seed4j.module.domain.Seed4JModulesFixture;
+import com.seed4j.module.domain.properties.Seed4JModuleProperties;
 import org.junit.jupiter.api.Test;
-import tech.jhipster.lite.TestFileUtils;
-import tech.jhipster.lite.UnitTest;
-import tech.jhipster.lite.module.domain.JHipsterModule;
-import tech.jhipster.lite.module.domain.JHipsterModulesFixture;
-import tech.jhipster.lite.module.domain.properties.JHipsterModuleProperties;
 
 @UnitTest
 class MyModuleFactoryTest {
@@ -32,13 +32,13 @@ class MyModuleFactoryTest {
 
   @Test
   void shouldBuildModule() {
-    JHipsterModuleProperties properties = JHipsterModulesFixture.propertiesBuilder(TestFileUtils.tmpDirForTest())
-      .basePackage("tech.jhipster.jhlitest")
+    Seed4JModuleProperties properties = Seed4JModulesFixture.propertiesBuilder(TestFileUtils.tmpDirForTest())
+      .basePackage("com.seed4j.sampletest")
       .build();
 
-    JHipsterModule module = factory.buildModule(properties);
+    Seed4JModule module = factory.buildModule(properties);
 
-    assertThatModule(module).hasPrefixedFiles("src/main/java/tech/jhipster/jhlitest/my_package", "Dummy.java");
+    assertThatModule(module).hasPrefixedFiles("src/main/java/com/seed4j/sampletest/my_package", "Dummy.java");
   }
 }
 ```
@@ -46,19 +46,19 @@ class MyModuleFactoryTest {
 A few things to note here:
 
 - We are expecting to have a `buildModule(...)` method in `MyModuleFactory`;
-- The `JHipsterModulesAssertions.assertThatModule(...)` will really apply the module to a project and give you a fluent API to ensure some operations;
+- The `Seed4JModulesAssertions.assertThatModule(...)` will really apply the module to a project and give you a fluent API to ensure some operations;
 - Even if the feedback loops are not perfect on that they should be short enough to allow a decent TDD implementation of the factory (on eclipse with [infinitest](https://infinitest.github.io/) feedbacks are under a second).
 
 So, now that we have a first test we can do a simple implementation:
 
 ```java
-import static tech.jhipster.lite.module.domain.JHipsterModule.*;
+import static com.seed4j.module.domain.Seed4JModule.*;
 
 public class MyModuleFactory {
 
-  private static final JHipsterSource SOURCE = from("my-module");
+  private static final Seed4JSource SOURCE = from("my-module");
 
-  public JHipsterModule buildModule(JHipsterModuleProperties properties) {
+  public Seed4JModule buildModule(Seed4JModuleProperties properties) {
     // @formatter:off
     return moduleBuilder(properties)
       .files()
@@ -84,19 +84,19 @@ public class Dummy {
 
 Those placeholders will be replaced by properties values during module application.
 
-And this is it for this part of the documentation... Of course you can do a lot more than that in the `JHipsterModule` but the goal of this documentation is not to go deep in this usage! You have a lot of running example and you can always ask for help, we'll be really happy to help you provide your implementations!
+And this is it for this part of the documentation... Of course you can do a lot more than that in the `Seed4JModule` but the goal of this documentation is not to go deep in this usage! You have a lot of running example and you can always ask for help, we'll be really happy to help you provide your implementations!
 
-## Creating JHipsterModuleResource
+## Creating Seed4JModuleResource
 
-As the main goal of a `JHipsterModuleResource` is to expose a WebService let's start by creating a gherkin scenario for that. So in `src/test/features/my-module.feature` we'll do:
+As the main goal of a `Seed4JModuleResource` is to expose a WebService let's start by creating a gherkin scenario for that. So in `src/test/features/my-module.feature` we'll do:
 
 ```
 Feature: My module
 
   Scenario: Should apply my module
     When I apply "my-module" module to default project
-      | packageName | tech.jhipster.chips |
-    Then I should have files in "src/main/java/tech/jhipster/chips/my_package"
+      | packageName | com.seed4j.chips |
+    Then I should have files in "src/main/java/com/seed4j/chips/my_package"
       | Dummy.java |
 ```
 
@@ -115,25 +115,25 @@ You can now run `CucumberTest` and ensure that it is failing as expected:
 }
 ```
 
-To be used by JHLite, the `JHipsterModuleResource` needs to be a Spring bean so, let's create a configuration in `com.seed4j.extension.my_module.infrastructure.primary`:
+To be used by Seed4J, the `Seed4JModuleResource` needs to be a Spring bean so, let's create a configuration in `com.seed4j.extension.my_module.infrastructure.primary`:
 
 ```java
 import static com.seed4j.extension.slug.domain.MyAppModuleSlug.*;
 
 import com.seed4j.extension.my_module.application.MyModuleApplicationService;
+import com.seed4j.module.domain.resource.Seed4JModulePropertiesDefinition;
+import com.seed4j.module.domain.resource.Seed4JModuleResource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import tech.jhipster.lite.module.domain.resource.JHipsterModulePropertiesDefinition;
-import tech.jhipster.lite.module.domain.resource.JHipsterModuleResource;
 
 @Configuration
 class MyModuleModuleConfiguration {
 
   @Bean
-  JHipsterModuleResource myModule(MyModuleApplicationService myModules) {
-    return JHipsterModuleResource.builder()
+  Seed4JModuleResource myModule(MyModuleApplicationService myModules) {
+    return Seed4JModuleResource.builder()
       .slug(MY_MODULE)
-      .propertiesDefinition(JHipsterModulePropertiesDefinition.builder().addBasePackage().build())
+      .propertiesDefinition(Seed4JModulePropertiesDefinition.builder().addBasePackage().build())
       .apiDoc("Group", "This is my module")
       .standalone()
       .tags("server")
@@ -142,19 +142,19 @@ class MyModuleModuleConfiguration {
 }
 ```
 
-In fact, you don't really have choices here, the `JHipsterModuleResource.builder()` is fluent and will only let you go to the next possible step. The most confusing one may be the last one `.factory(myModules::buildModule)` which is, in fact, a method called to build the module.
+In fact, you don't really have choices here, the `Seed4JModuleResource.builder()` is fluent and will only let you go to the next possible step. The most confusing one may be the last one `.factory(myModules::buildModule)` which is, in fact, a method called to build the module.
 
 You'll need to create the MyAppModuleSlug.MY_MODULE enum, which was mentioned earlier. Let's create it in the `com.seed4j.extension.slug.domain` package:
 
 ```java
+import com.seed4j.module.domain.resource.Seed4JModuleSlugFactory;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import tech.jhipster.lite.module.domain.resource.JHipsterModuleSlugFactory;
 
-public enum MyAppModuleSlug implements JHipsterModuleSlugFactory {
+public enum MyAppModuleSlug implements Seed4JModuleSlugFactory {
   MY_MODULE("my-module");
 
   private static final Map<String, MyAppModuleSlug> moduleSlugMap = Stream.of(values()).collect(
@@ -189,20 +189,20 @@ public class MyModuleApplicationService {
     factory = new MyModuleFactory();
   }
 
-  public JHipsterModule buildModule(JHipsterModuleProperties properties) {
+  public Seed4JModule buildModule(Seed4JModuleProperties properties) {
     return factory.buildModule(properties);
   }
 }
 ```
 
-In your `JHipsterModuleResource` you can define additional properties and an organization to display your module in the landscape (replacing `.standalone()`). Here again, you have a lot of examples to rely on.
+In your `Seed4JModuleResource` you can define additional properties and an organization to display your module in the landscape (replacing `.standalone()`). Here again, you have a lot of examples to rely on.
 
 ## Hide modules
 
 You can hide modules from your custom instance in project configuration with:
 
-- `jhlite.hidden-resources.slugs`: To disable including its dependencies by slugs
-- `jhlite.hidden-resources.tags`: To disable by tags
+- `seed4j.hidden-resources.slugs`: To disable including its dependencies by slugs
+- `seed4j.hidden-resources.tags`: To disable by tags
 
 ## Docker versions
 
@@ -219,7 +219,7 @@ class MyDockerImagesReader implements DockerImagesReader {
 }
 ```
 
-Of course you can add any version resolution logic you want in the implementation. You can have a look at [FileSystemDockerImagesReader](https://github.com/jhipster/jhipster-lite/blob/main/src/main/java/tech/jhipster/lite/module/infrastructure/secondary/docker/FileSystemDockerImagesReader.java) for an implementation reading from a local file (managed by dependabot).
+Of course you can add any version resolution logic you want in the implementation. You can have a look at [FileSystemDockerImagesReader](https://github.com/seed4j/seed4j/blob/main/src/main/java/com/seed4j/module/infrastructure/secondary/docker/FileSystemDockerImagesReader.java) for an implementation reading from a local file (managed by dependabot).
 
 ## Java versions
 
@@ -236,18 +236,18 @@ class MyJavaDependenciesReader implements JavaDependenciesReader {
 }
 ```
 
-Of course you can add any version resolution logic you want in the implementation. You can have a look at [FileSystemMavenDependenciesReader](https://github.com/jhipster/jhipster-lite/blob/main/src/main/java/tech/jhipster/lite/module/infrastructure/secondary/javadependency/FileSystemMavenDependenciesReader.java) for an implementation reading from a local file (managed by dependabot).
+Of course you can add any version resolution logic you want in the implementation. You can have a look at [FileSystemMavenDependenciesReader](https://github.com/seed4j/seed4j/blob/main/src/main/java/com/seed4j/module/infrastructure/secondary/javadependency/FileSystemMavenDependenciesReader.java) for an implementation reading from a local file (managed by dependabot).
 
 You can add it in your tests using
 
 ```java
-TestJHipsterModules.register(myReader);
+TestSeed4JModules.register(myReader);
 ```
 
 And remove it using
 
 ```java
-TestJHipsterModules.unregisterReaders();
+TestSeed4JModules.unregisterReaders();
 ```
 
 ## Npm versions
@@ -265,16 +265,16 @@ class MyNpmVersionsReader implements NpmVersionsReader {
 }
 ```
 
-Of course you can add any version resolution logic you want in the implementation. You can have a look at [FileSystemNpmVersionReader](https://github.com/jhipster/jhipster-lite/blob/main/src/main/java/tech/jhipster/lite/module/infrastructure/secondary/npm/FileSystemNpmVersionReader.java) for an implementation reading from a local file (managed by dependabot).
+Of course you can add any version resolution logic you want in the implementation. You can have a look at [FileSystemNpmVersionReader](https://github.com/seed4j/seed4j/blob/main/src/main/java/com/seed4j/module/infrastructure/secondary/npm/FileSystemNpmVersionReader.java) for an implementation reading from a local file (managed by dependabot).
 
 You can add it in your tests using
 
 ```java
-TestJHipsterModules.register(myReader);
+TestSeed4JModules.register(myReader);
 ```
 
 And remove it using
 
 ```java
-TestJHipsterModules.unregisterReaders();
+TestSeed4JModules.unregisterReaders();
 ```

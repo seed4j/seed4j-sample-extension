@@ -1,9 +1,9 @@
 package com.seed4j.extension.generator.prettier.properties.application;
 
 import com.seed4j.extension.generator.prettier.properties.domain.PrettierPluginsModuleFactory;
+import com.seed4j.module.domain.Seed4JModule;
+import com.seed4j.module.domain.properties.Seed4JModuleProperties;
 import org.springframework.stereotype.Service;
-import tech.jhipster.lite.module.domain.JHipsterModule;
-import tech.jhipster.lite.module.domain.properties.JHipsterModuleProperties;
 
 @Service
 public class PrettierPluginsApplicationService {
@@ -14,7 +14,7 @@ public class PrettierPluginsApplicationService {
     factory = new PrettierPluginsModuleFactory();
   }
 
-  public JHipsterModule buildPropertiesPluginModule(JHipsterModuleProperties properties) {
+  public Seed4JModule buildPropertiesPluginModule(Seed4JModuleProperties properties) {
     return factory.buildPropertiesPluginModule(properties);
   }
 }

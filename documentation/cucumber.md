@@ -15,18 +15,17 @@ Feature: Simple WebService test
 You'll then have to define the glue code:
 
 ```java
-import static com.seed4j.extension.cucumber.rest.CucumberRestAssertions.*;
+import static com.seed4j.cucumber.rest.CucumberRestAssertions.*;
 
-import com.seed4j.extension.cucumber.CucumberRestTemplate;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.resttestclient.TestRestTemplate;
 
 public class SimpleSteps {
 
   @Autowired
-  private CucumberRestTemplate rest;
+  private TestRestTemplate rest;
 
   @When("I get simple bean {string}")
   public void callSimpleWebService(String bean) {
@@ -109,10 +108,7 @@ You may need to mock beans for your component tests, but you won't be able to do
 ```java
 @ActiveProfiles("test")
 @CucumberContextConfiguration
-@SpringBootTest(
-  classes = { JhipsterSampleApplicationApp.class, CucumberMocksConfiguration.class },
-  webEnvironment = WebEnvironment.RANDOM_PORT
-)
+@SpringBootTest(classes = { Seed4JSampleExtensionApp.class, CucumberMocksConfiguration.class }, webEnvironment = WebEnvironment.RANDOM_PORT)
 public class CucumberConfiguration {
 
   // other code omitted

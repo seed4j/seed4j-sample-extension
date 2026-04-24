@@ -1,0 +1,10 @@
+
+ ${AnsiColor.YELLOW}███████╗ ███████╗ ███████╗ ██████╗  ${AnsiColor.GREEN}██╗  ██╗      ██╗
+ ${AnsiColor.YELLOW}██╔════╝ ██╔════╝ ██╔════╝ ██╔══██╗ ${AnsiColor.GREEN}██║  ██║      ██║
+ ${AnsiColor.YELLOW}███████╗ █████╗   █████╗   ██║  ██║ ${AnsiColor.GREEN}███████║      ██║
+ ${AnsiColor.YELLOW}╚════██║ ██╔══╝   ██╔══╝   ██║  ██║ ${AnsiColor.GREEN}╚════██║ ██   ██║
+ ${AnsiColor.YELLOW}███████║ ███████╗ ███████╗ ██████╔╝ ${AnsiColor.GREEN}     ██║ ╚█████╔╝
+ ${AnsiColor.YELLOW}╚══════╝ ╚══════╝ ╚══════╝ ╚═════╝  ${AnsiColor.GREEN}     ╚═╝  ╚════╝
+
+${AnsiStyle.BOLD}${AnsiColor.BLUE}:: Seed4J 🌱 :: Running Spring Boot ${spring-boot.version} ::
+:: https://seed4j.com ::${AnsiColor.DEFAULT}

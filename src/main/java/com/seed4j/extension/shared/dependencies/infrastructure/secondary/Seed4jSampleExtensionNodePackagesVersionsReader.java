@@ -1,14 +1,14 @@
 package com.seed4j.extension.shared.dependencies.infrastructure.secondary;
 
 import com.seed4j.extension.shared.dependencies.domain.Seed4jSampleExtensionNodePackagesVersionSource;
+import com.seed4j.module.domain.ProjectFiles;
+import com.seed4j.module.domain.nodejs.NodePackagesVersions;
+import com.seed4j.module.infrastructure.secondary.nodejs.FileSystemNodePackagesVersionReader;
+import com.seed4j.module.infrastructure.secondary.nodejs.NodePackagesVersionsReader;
 import java.util.List;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Repository;
-import tech.jhipster.lite.module.domain.ProjectFiles;
-import tech.jhipster.lite.module.domain.nodejs.NodePackagesVersions;
-import tech.jhipster.lite.module.infrastructure.secondary.nodejs.FileSystemNodePackagesVersionReader;
-import tech.jhipster.lite.module.infrastructure.secondary.nodejs.NodePackagesVersionsReader;
 
 @Repository
 @Order(Ordered.HIGHEST_PRECEDENCE)

@@ -1,16 +1,16 @@
 package com.seed4j.extension.generator.server.springboot.startupreport.domain;
 
-import static tech.jhipster.lite.module.domain.JHipsterModule.javaDependency;
-import static tech.jhipster.lite.module.domain.JHipsterModule.moduleBuilder;
+import static com.seed4j.module.domain.Seed4JModule.javaDependency;
+import static com.seed4j.module.domain.Seed4JModule.moduleBuilder;
 
-import tech.jhipster.lite.module.domain.JHipsterModule;
-import tech.jhipster.lite.module.domain.javadependency.JavaDependency;
-import tech.jhipster.lite.module.domain.properties.JHipsterModuleProperties;
-import tech.jhipster.lite.shared.error.domain.Assert;
+import com.seed4j.module.domain.Seed4JModule;
+import com.seed4j.module.domain.javadependency.JavaDependency;
+import com.seed4j.module.domain.properties.Seed4JModuleProperties;
+import com.seed4j.shared.error.domain.Assert;
 
 public class SpringBootStartupReportModuleFactory {
 
-  public JHipsterModule buildModule(JHipsterModuleProperties properties) {
+  public Seed4JModule buildModule(Seed4JModuleProperties properties) {
     Assert.notNull("properties", properties);
     return moduleBuilder(properties).javaDependencies().addDependency(startupReportDependency()).and().build();
   }

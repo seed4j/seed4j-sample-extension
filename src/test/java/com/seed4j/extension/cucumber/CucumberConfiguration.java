@@ -1,17 +1,15 @@
 package com.seed4j.extension.cucumber;
 
+import com.seed4j.cucumber.rest.CucumberRestTestContext;
 import com.seed4j.extension.Seed4JSampleExtensionApp;
-import com.seed4j.extension.cucumber.CucumberConfiguration.CucumberRestTemplateConfiguration;
-import com.seed4j.extension.cucumber.rest.CucumberRestTemplate;
 import io.cucumber.java.Before;
 import io.cucumber.spring.CucumberContextConfiguration;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import org.springframework.boot.resttestclient.TestRestTemplate;
+import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.BufferingClientHttpRequestFactory;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
@@ -20,14 +18,11 @@ import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.client.RestTemplate;
-import tech.jhipster.lite.cucumber.rest.CucumberRestTestContext;
 
 @ActiveProfiles("test")
 @CucumberContextConfiguration
-@SpringBootTest(
-  classes = { Seed4JSampleExtensionApp.class, CucumberRestTemplateConfiguration.class },
-  webEnvironment = WebEnvironment.RANDOM_PORT
-)
+@AutoConfigureTestRestTemplate
+@SpringBootTest(classes = Seed4JSampleExtensionApp.class, webEnvironment = WebEnvironment.RANDOM_PORT)
 public class CucumberConfiguration {
 
   private final TestRestTemplate rest;
@@ -59,14 +54,5 @@ public class CucumberConfiguration {
 
       return response;
     };
-  }
-
-  @TestConfiguration
-  static class CucumberRestTemplateConfiguration {
-
-    @Bean
-    CucumberRestTemplate cucumberRestTemplate(TestRestTemplate rest) {
-      return new CucumberRestTemplate(rest);
-    }
   }
 }

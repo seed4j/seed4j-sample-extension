@@ -1,12 +1,12 @@
 package com.seed4j.extension.shared.dependencies.infrastructure.secondary;
 
+import com.seed4j.module.domain.ProjectFiles;
+import com.seed4j.module.domain.javadependency.JavaDependenciesVersions;
+import com.seed4j.module.infrastructure.secondary.javadependency.FileSystemMavenDependenciesReader;
+import com.seed4j.module.infrastructure.secondary.javadependency.JavaDependenciesReader;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Repository;
-import tech.jhipster.lite.module.domain.ProjectFiles;
-import tech.jhipster.lite.module.domain.javadependency.JavaDependenciesVersions;
-import tech.jhipster.lite.module.infrastructure.secondary.javadependency.FileSystemMavenDependenciesReader;
-import tech.jhipster.lite.module.infrastructure.secondary.javadependency.JavaDependenciesReader;
 
 @Repository
 @Order(Ordered.HIGHEST_PRECEDENCE)
