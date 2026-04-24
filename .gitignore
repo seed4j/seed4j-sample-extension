@@ -128,3 +128,8 @@ Desktop.ini
 /target/
 # Maven Wrapper
 !.mvn/wrapper/maven-wrapper.jar
+
+######################
+# AI Agent
+######################
+.codex
