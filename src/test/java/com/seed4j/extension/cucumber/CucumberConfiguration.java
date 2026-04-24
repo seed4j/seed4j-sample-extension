@@ -43,7 +43,7 @@ public class CucumberConfiguration {
     RestTemplate template = rest.getRestTemplate();
     template.setRequestFactory(requestFactory);
     template.setInterceptors(List.of(saveLastResultInterceptor()));
-    template.getMessageConverters().add(0, new StringHttpMessageConverter(StandardCharsets.UTF_8));
+    template.getMessageConverters().addFirst(new StringHttpMessageConverter(StandardCharsets.UTF_8));
   }
 
   private ClientHttpRequestInterceptor saveLastResultInterceptor() {
