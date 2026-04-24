@@ -59,7 +59,7 @@ if [[ $application == 'fullapp' ]]; then
   applyModules \
     "java-base" \
     "spring-boot" \
-    "banner-jhipster-v7" \
+    "banner-seed4j-v7" \
     "prettier" \
     "prettier-plugin-properties" \
     "spring-boot-startup-report" \
