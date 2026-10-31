@@ -100,6 +100,12 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>com.seed4j</groupId>
+      <artifactId>seed4j-test</artifactId>
+      <version>${seed4j.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>com.approvaltests</groupId>
       <artifactId>approvaltests</artifactId>
       <version>${approvaltests.version}</version>
@@ -123,7 +129,7 @@
     <spring-boot.version>4.0.1</spring-boot.version>
     <junit-jupiter.version>5.13.3</junit-jupiter.version>
     <cucumber.version>7.28.1</cucumber.version>
-    <seed4j.version>2.2.0</seed4j.version>
+    <seed4j.version>2.2.1-SNAPSHOT</seed4j.version>
     <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
     <checkstyle.version>13.3.0</checkstyle.version>
     <jacoco.version>0.8.13</jacoco.version>
